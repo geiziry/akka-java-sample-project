@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akkasampleproject.iml" filepath="$PROJECT_DIR$/.idea/modules/akkasampleproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akkasampleproject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/akkasampleproject_main.iml" group="akkasampleproject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akkasampleproject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/akkasampleproject_test.iml" group="akkasampleproject" />
+    </modules>
+  </component>
+</project>
