@@ -1,10 +1,27 @@
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
 import java.time.Duration;
 
 public class Pi {
 
-    static class Calculate{
+    public static void main(String[] args) {
+        Pi pi = new Pi();
+        pi.calculate(4, 10000, 10000);
+    }
+
+    private void calculate(final int nrofWorkers,final int nroElements,final int nrofMessages) {
+        ActorSystem system = ActorSystem.create("PiSystem");
+
+        final ActorRef listener = system.actorOf( Props.create(Listener.class), "listener");
+
+        ActorRef master = system.actorOf(Props.create(Master.class, nrofWorkers, nrofMessages, nroElements, listener), "master");
+
+        master.tell(new Calculate(),null);
 
     }
+
 
     static class Work{
         private final int start;
@@ -54,4 +71,6 @@ public class Pi {
         }
     }
 
+    static class Calculate {
+    }
 }
